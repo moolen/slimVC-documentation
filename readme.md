@@ -1,4 +1,4 @@
-The documentation is split into the following chapters:
+This Documentation is split into the following chapters:
 
 - [installation & setup](https://github.com/moolen/SlimVC-documentation/tree/master/setup.md)
 - [configuration](https://github.com/moolen/SlimVC-documentation/tree/master/configuration.md)

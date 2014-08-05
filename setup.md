@@ -6,7 +6,7 @@ install composer (https://getcomposer.org/download/) and run `composer install` 
 Be sure to create a .htaccess file (e.g. by setting permalinks in the wordpress admin area)
 
 ## Configuration
-Be sure to instantiate the SlimVC Singleton in your functions.php. This will parse the Config/ dir, setup the wp-core-hooks, instantiate the Router.
+Be sure to instantiate the SlimVC Singleton in your `functions.php`. This will parse the `app/Config/` directory, setup the wp-core-hooks and instantiates the Router.
 
 ```PHP
 // @functions.php

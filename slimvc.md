@@ -1,9 +1,12 @@
-# SlimVC
-
-The SlimVC 
+# SlimVC Class
 
 ## Instantiation
-The SlimVC Class is a Singleton. Get the instance by calling `$App = \App\Lib\SlimVC\SlimVC::getInstance()`. The static getInstance() Method actually returns a \Slim\Slim object which is the micro-framework behind SlimVC. See the documentation on \Slim\Slim [here](http://docs.slimframework.com).
+The SlimVC Class is a Singleton. Get the instance by calling 
+
+```PHP
+$App = \App\Lib\SlimVC\SlimVC::getInstance();
+```
+The static getInstance() method actually returns a \Slim\Slim object which is the micro-framework behind SlimVC. See the documentation on \Slim\Slim [here](http://docs.slimframework.com).
 
 ### $App->request
 

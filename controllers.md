@@ -3,8 +3,8 @@
 How you implement the Controller is up to you. This is a demonstration of how it could be implemented.
 The constructor gets 2 arguments: 
 
-- 1. [SlimVC Singleton](https://github.com/moolen/SlimVC-documentation/tree/master/slimvc.md) instance
-- 2. $params array containing optional [route parameter](https://github.com/moolen/SlimVC-documentation/tree/master/routing.md)
+- [SlimVC Singleton](https://github.com/moolen/SlimVC-documentation/tree/master/slimvc.md) instance
+- $params array containing optional [route parameter](https://github.com/moolen/SlimVC-documentation/tree/master/routing.md)
 
 The Callback or constructor recieves 2 Arguments: `$App` & `$params`.
 First is a instance of the [SlimVC Singleton](https://github.com/moolen/SlimVC-documentation/tree/master/slimvc.md), second are the optional routing parameters. For example, if you create a explicit route `/foo/:param1/:param2` and `/foo/bar/baz` is requested $params would be `array('bar', 'baz')`.
