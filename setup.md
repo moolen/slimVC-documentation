@@ -10,8 +10,11 @@ Be sure to instantiate the SlimVC Singleton in your functions.php. This will par
 
 ```PHP
 // @functions.php
+// load composers' PSR-0 autoloader
 require 'app/vendor/autoload.php';
+// bootstrap SlimVC
 $App = App\Lib\SlimVC\SlimVC::getInstance();
 ```
+
 After that are you ready to create / modify the files in `app/Config` directory to setup your CPT, CT, templates, imagesizes etc.
-Take a look @configuration.md
+Take a look @configuration.md__here__

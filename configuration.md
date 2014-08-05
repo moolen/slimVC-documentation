@@ -38,6 +38,7 @@ return array(
 ```
 
 ## Post Types
+
 ```PHP
 // postType.php
 return array(
@@ -75,6 +76,7 @@ return array(
 ```
 
 ## Sidebars
+
 ```PHP
 // sidebars.php
 return array(
@@ -123,6 +125,7 @@ return array(
 ```
 
 ## Page-Templates
+
 ```PHP
 // templates.php
 return array(
@@ -132,6 +135,7 @@ return array(
 ``` 
 
 ## Application Configuration
+
 ```PHP
 // application.php
 return array(

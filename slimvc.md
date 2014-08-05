@@ -55,7 +55,9 @@ Slim's Response object exposes the following public methods:
 
 More documentation about \Slim\Response __here__.
 
+## $App->post
 
+The post property is Wordpress' global $post object.
 
 ## Event API
 
