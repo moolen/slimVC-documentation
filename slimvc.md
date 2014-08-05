@@ -3,7 +3,7 @@
 The SlimVC 
 
 ## Instantiation
-The SlimVC Class is a Singleton. Get the instance by calling `$App = \App\Lib\SlimVC\SlimVC::getInstance()`. The static getInstance() Method actually returns a \Slim\Slim object which is the micro-framework behind SlimVC. See the documentation on \Slim\Slim __here__.
+The SlimVC Class is a Singleton. Get the instance by calling `$App = \App\Lib\SlimVC\SlimVC::getInstance()`. The static getInstance() Method actually returns a \Slim\Slim object which is the micro-framework behind SlimVC. See the documentation on \Slim\Slim [here](http://docs.slimframework.com).
 
 ### $App->request
 
@@ -20,7 +20,7 @@ Slim's Request object exposes the following public methods:
 - isAjax()
 - params()
 
-More documentation about \Slim\Request __here__.
+More documentation about \Slim\Request [here](http://docs.slimframework.com).
 
 ### $App->response
 
@@ -53,7 +53,7 @@ Slim's Response object exposes the following public methods:
 - write()
 - redirect()
 
-More documentation about \Slim\Response __here__.
+More documentation about \Slim\Response [here](http://docs.slimframework.com).
 
 ## $App->post
 
