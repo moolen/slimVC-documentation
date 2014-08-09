@@ -142,13 +142,11 @@ return array(
 	'debug' => true,
 	'namespace.controller' => '\\App\\Conrollers\\',
 	'method.seperator' => ':',
+	'log.level' => 8,
+	'log.enabled' => true,
 	'slim' => array(
 		// env vars
-		'mode' => 'development',
-		'log.enabled' => true,
 		'log.writer' => new \App\Lib\SlimVC\Logger(),
-		'log.level' => \Slim\Log::DEBUG,
-
 		// view & templating
 		'view' => new \Slim\Views\Twig(),
 		'templates.path' => dirname(__FILE__) . '/../Views',
@@ -156,6 +154,28 @@ return array(
 	
 );
 ```
+
+### Application Configuration Options
+
+#### `debug` (boolean)
+En-/Disable debugging mode. En-/Disables caching (For Twig & config files).
+
+#### `namespace.controller` (string)
+
+Sets the Namespace for the Controllers. default is `\App\Controllers`
+
+#### `method.seperator` (string)
+
+What method seperator you would like to use whe configuring routes. default is `::`. 
+
+#### `log.level` (int, 1-8)
+Set the log level from 1 to 8. 8 is verbosest.
+
+#### `log.enabled` (boolean)
+En-/Disable the logger.
+
+#### `slim`
+Here you can pass in options to the Slim Object. You can override the Templating engine, template path, 
 
 ## Advanced Customfields
 With version 5 ACF field definitions are saved automatically as json inside the theme directory. With SlimVC those files are saved within `app/Config/acf`.
