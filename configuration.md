@@ -161,21 +161,21 @@ return array(
 
 All of the following options are passed into the `Slim` instance.
 
-#### `debug` (boolean)
+##### `debug` (boolean)
 En-/Disable debugging mode. En-/Disables caching (For Twig & config files).
 
-#### `namespace.controller` (string)
+##### `namespace.controller` (string)
 
 Sets the Namespace for the Controllers. default is `\App\Controllers`
 
-#### `method.seperator` (string)
+##### `method.seperator` (string)
 
 What method seperator you would like to use whe configuring routes. default is `::`. 
 
-#### `log.level` (int, 1-8)
+##### `log.level` (int, 1-8)
 Set the log level from 1 to 8. 8 is verbosest.
 
-#### `log.enabled` (boolean)
+##### `log.enabled` (boolean)
 En-/Disable the logger.
 
 ## Advanced Customfields
