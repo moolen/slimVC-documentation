@@ -40,7 +40,31 @@ return array(
 
 ## Conditional Routes
 
-Conditonal routes are a little bit more complex; they use WP's conditional tags under the hood (keep that in mind). You define the conditions under what circumstances a controller is invoked. The configuration is pretty straight-forward, lets take a example:
+Conditonal routes are a little bit more complex; they use WP's Conditional Tags under the hood (keep that in mind). You define the conditions under what circumstances a controller is invoked.
+
+Implemented Conditional Tags:
+
+- home
+- front_page
+- blog_page
+- admin
+- author
+- single
+- page
+- page_template
+- category
+- tag
+- tax
+- archive
+- search
+- sticky
+- singular
+- 404
+- post_type_archive
+
+More about [Conditional Tags here](http://codex.wordpress.org/Conditional_Tags).
+
+The configuration is pretty straight-forward, lets take a example:
 
 You have an custom post type 'books'.
 Now you want the books-archive request mapped to **'MyController::archive'** (archive is the method on MyController), then you go:
@@ -60,13 +84,22 @@ return array(
 );
 ```
 
-Now you want the single-book request mapped to **'MyController::single'**, then you go:
+Now you want to add a single-book page for each book., then you go:
 
 ```PHP
 // @app/Config/routes.php
 return array(
 	'explicit' => array(/****/),
 	'conditional' => array(
+		// same as above: 
+		// map books-archive to MyController::archive
+		array(
+			'post_type' => 'books',
+			'archive' => true,
+			'controller' => 'MyController::archive'
+		),
+		// now let's map the single-book urls
+		// to MyController::single
 		array(
 			'post_type' => 'books',
 			'single' => true,
@@ -77,28 +110,16 @@ return array(
 );
 ```
 
-A little more complex situation:
+## Additional arguments
+
+You can define more than one option for a condition. You can define an array containing a post id, post title or post slug **BUT** not all tags support additional arguments. Look [here](http://codex.wordpress.org/Conditional_Tags#toc) if the tag supports additional arguments. Most do like `single`, `sticky`, `page`, `category`, `tag`, `tax`, `term`, `author` and `singular`. 
+Another example: 
 
 ```PHP
 // @app/Config/routes.php
 return array(
 
-	'explicit' => array(
-
-		array(
-			'method'		=> 'GET',
-			'path'			=> '/my-books/(:title?)',
-			'controller'	=> 'BooksController'
-		),
-
-		array(
-			// GET method is default
-			'path'			=> '/baz/:bee',
-			'controller'	=> 'PostsController:foo'
-		),
-
-	),
-
+	'explicit' => array(/****/),
 	'conditional' => array(
 
 		array(
@@ -107,16 +128,22 @@ return array(
 			'controller' => 'PageController::doorPage'
 		),
 
+		// only cat with id 1 OR 2 OR 3
+		array(
+			'category' => array(1,2,3),
+			'controller' => 'SpecialCategoriesController::archive'
+		),
+
 		array(
 			'archive' => true,
 			'post_type' => 'books',
-			'controller' => 'BooksController:archive'
+			'controller' => 'BooksController::archive'
 		),
 
 		array(
 			'single' => true,
 			'post_type' => 'books',
-			'controller' => 'BooksController:single'
+			'controller' => 'BooksController::single'
 		),
 
 		array(
