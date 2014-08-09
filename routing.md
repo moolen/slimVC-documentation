@@ -84,7 +84,7 @@ return array(
 );
 ```
 
-Now you want to add a single-book page for each book., then you go:
+Now you want to add a single-book page for each book. Then you go:
 
 ```PHP
 // @app/Config/routes.php
@@ -112,7 +112,7 @@ return array(
 
 ## Additional arguments
 
-You can define more than one option for a condition. You can define an array containing a post id, post title or post slug **BUT** not all tags support additional arguments. Look [here](http://codex.wordpress.org/Conditional_Tags#toc) if the tag supports additional arguments. Most do like `single`, `sticky`, `page`, `category`, `tag`, `tax`, `term`, `author` and `singular`. 
+You can define more than one option for a condition. You can define an array containing a **post id, post title or post slug** **BUT** not all tags support additional arguments. Look [here](http://codex.wordpress.org/Conditional_Tags#toc) if the tag supports additional arguments. Most do like `single`, `sticky`, `page`, `category`, `tag`, `tax`, `term`, `author` and `singular`. 
 Another example: 
 
 ```PHP
