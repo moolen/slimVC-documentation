@@ -145,8 +145,6 @@ return array(
 	'log.level' => 8,
 	'log.enabled' => true,
 	'slim' => array(
-		// env vars
-		'log.writer' => new \App\Lib\SlimVC\Logger(),
 		// view & templating
 		'view' => new \Slim\Views\Twig(),
 		'templates.path' => dirname(__FILE__) . '/../Views',

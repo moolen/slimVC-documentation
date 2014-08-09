@@ -5,7 +5,7 @@ In each route you map an incoming request to a controller.
 
 ## Explicit Routes
 
-Explicit routes take precedence over conditional routes; You define a HTTP Method a path and map that to a controller.
+Explicit routes take precedence over conditional routes; You define a HTTP **Method**, a **path** and map that to a **controller**.
 
 the following HTTP Methods are supported:
 - `GET`
@@ -13,6 +13,7 @@ the following HTTP Methods are supported:
 - `PUT`
 - `DELETE`
 - `PATCH`
+- `HEAD`
 
 ```PHP
 // @app/Config/routes.php
@@ -39,9 +40,10 @@ return array(
 
 ## Conditional Routes
 
-Conditonal routes are a little bit more complex; they use WP's conditional tags under the hood (keep that in mind). You define the conditions under what circumstances a controller is invoked, the configuration is pretty straight-forward. Lets take a example:
+Conditonal routes are a little bit more complex; they use WP's conditional tags under the hood (keep that in mind). You define the conditions under what circumstances a controller is invoked. The configuration is pretty straight-forward, lets take a example:
 
-You want a custom post type ('books') archive mapped to 'MyController::archive' (archive is the method on MyController), then you go:
+You have an custom post type 'books'.
+Now you want the books-archive request mapped to **'MyController::archive'** (archive is the method on MyController), then you go:
 
 ```PHP
 // @app/Config/routes.php
@@ -52,6 +54,23 @@ return array(
 			'post_type' => 'books',
 			'archive' => true,
 			'controller' => 'MyController::archive'
+		)
+	)
+
+);
+```
+
+Now you want the single-book request mapped to **'MyController::single'**, then you go:
+
+```PHP
+// @app/Config/routes.php
+return array(
+	'explicit' => array(/****/),
+	'conditional' => array(
+		array(
+			'post_type' => 'books',
+			'single' => true,
+			'controller' => 'MyController::single'
 		)
 	)
 
@@ -84,8 +103,8 @@ return array(
 
 		array(
 			'page' => true,
-			//'page_template' => 'my-template',
-			'controller' => 'PageController'
+			'page_template' => 'door-page',
+			'controller' => 'PageController::doorPage'
 		),
 
 		array(
@@ -117,10 +136,10 @@ return array(
 
 ## Constructor Arguments
 
-The Callback or constructor recieves 2 Arguments: `$App` & `$params`.
+The constructor of a Controller Class recieves 2 Arguments: `$App` & `$params`.
 First is a instance of the SlimVC Singleton, second are the optional routing parameters. For example, if you create a explicit route `/foo/:param1/:param2` and `/foo/bar/baz` is requested $params would be `array('bar', 'baz')`.
 
-The documentation about the SlimVC Singleton is here.
+The documentation about the SlimVC Singleton is [here](https://github.com/moolen/SlimVC-documentation/tree/master/slimvc.md).
 
 ## Routing recommendation
 
