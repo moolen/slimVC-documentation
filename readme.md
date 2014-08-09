@@ -1,3 +1,5 @@
+# SlimVC Documentation
+
 This Documentation is split into the following chapters:
 
 - [Installation & Setup](https://github.com/moolen/SlimVC-documentation/tree/master/setup.md)
