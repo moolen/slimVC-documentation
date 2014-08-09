@@ -159,6 +159,8 @@ return array(
 
 ### Application Configuration Options
 
+All of the following options are passed into the `Slim` instance.
+
 #### `debug` (boolean)
 En-/Disable debugging mode. En-/Disables caching (For Twig & config files).
 
@@ -175,9 +177,6 @@ Set the log level from 1 to 8. 8 is verbosest.
 
 #### `log.enabled` (boolean)
 En-/Disable the logger.
-
-#### `slim`
-Here you can pass in options to the Slim Object. You can override the Templating engine, template path, 
 
 ## Advanced Customfields
 With version 5 ACF field definitions are saved automatically as json inside the theme directory. With SlimVC those files are saved within `app/Config/acf`.

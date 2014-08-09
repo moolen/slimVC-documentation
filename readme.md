@@ -1,4 +1,5 @@
 # SlimVC Documentation
+SlimVC uses [Slim](http://slimframework.com/) under the hood. Be sure to read [Slim Documentation](http://docs.slimframework.com/) if you want to dig deeper into it.
 
 This Documentation is split into the following chapters:
 
