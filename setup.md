@@ -3,7 +3,7 @@
 ## Installation
 - clone this repository into your `themes/` folder.
 - install composer (https://getcomposer.org/download/) 
-- and run `composer install` inside `themes/<your-theme>/app/` directory.
+- run `composer install` inside `themes/<your-theme>/app/` directory.
 
 Be sure to create a .htaccess file (e.g. by setting permalinks in the wordpress admin area).
 

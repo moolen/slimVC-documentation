@@ -1,6 +1,6 @@
 # Configuration
 
-You configure your App in app/Config directory, this includes the registration of custom post types, custom taxonomies, menus, sidebars, image size definition post-templates and a application configuration.
+You configure your Application inside `app/Config` directory, this includes the registration of custom post types, custom taxonomies, menus, sidebars, image size definition post-templates and a application configuration.
 
 The following files inside `app/Config` are parsed:
 
@@ -16,7 +16,7 @@ The following files inside `app/Config` are parsed:
 The setup is pretty straight-forward. Just look at the following examples:
 
 ## Image Sizes
-
+Image sizes are defined as associative array. The `key` is the image size name and the `value` an array containing x, y, and crop-mode (in order!).
 ```PHP
 // images.php
 return array(
@@ -27,7 +27,7 @@ return array(
 ```
 
 ## Menu Configuration
-
+Menus are defined as associative array. `key` is the slug, `value` the pretty name.
 ```PHP
 // menus.php
 return array(
@@ -39,6 +39,7 @@ return array(
 
 ## Post Types
 
+Post Types are defined as associative array; The `key` is the post-type-slug and the `value` is an array just the $args array for [`register_post_type`](http://codex.wordpress.org/Function_Reference/register_post_type).
 ```PHP
 // postType.php
 return array(
@@ -76,7 +77,8 @@ return array(
 ```
 
 ## Sidebars
-
+Sidebars are configured as array-of-arrays:
+Each inner Array contains the arguments for [`register_sidebar`](http://codex.wordpress.org/Function_Reference/register_sidebar).
 ```PHP
 // sidebars.php
 return array(
