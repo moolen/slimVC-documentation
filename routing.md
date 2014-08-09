@@ -1,11 +1,11 @@
 # Routing
 
-Two different Routing options are available, explicit routes and conditional routes.
+Two different Routing options are available, **explicit** routes and **conditional** routes.
 In each route you map an incoming request to a controller.
 
 ## Explicit Routes
 
-Explicit routes take precedence over conditional routes; You define a HTTP Method, path and controller.
+Explicit routes take precedence over conditional routes; You define a HTTP Method a path and map that to a controller.
 
 the following HTTP Methods are supported:
 - `GET`
@@ -39,7 +39,7 @@ return array(
 
 ## Conditional Routes
 
-Conditonal routes are a little bit more complex they use WP's conditional tags under the hood (keep that in mind). You define the conditions under what circumstances a controller is invoked, the configuration is pretty straight-forward. Lets take a example:
+Conditonal routes are a little bit more complex; they use WP's conditional tags under the hood (keep that in mind). You define the conditions under what circumstances a controller is invoked, the configuration is pretty straight-forward. Lets take a example:
 
 You want a custom post type ('books') archive mapped to 'MyController::archive' (archive is the method on MyController), then you go:
 
@@ -125,7 +125,7 @@ The documentation about the SlimVC Singleton is here.
 ## Routing recommendation
 
 Consider the following route setup:
-You have your custom post type 'books' and you want to render a archive and a single-item page. But you do not want to create a controller and model for each Route. 
+You have your custom post type 'books' and you want to render a archive and a single-item page. But you do not want to create a controller and a model for each Route. 
 Instead, you can create a shared controller that sets up the shared model and the method aggregates the data from the model and sends it to the view.
 
 In th application configuration you can set the `method.seperator`, default is `::`.
