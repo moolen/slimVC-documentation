@@ -39,7 +39,7 @@ return array(
 
 ## Post Types
 
-Post Types are defined as associative array; The `key` is the post-type-slug and the `value` is an array just the $args array for [`register_post_type`](http://codex.wordpress.org/Function_Reference/register_post_type).
+Post Types are defined as associative array; The `key` is the post-type-slug and the `value` is an array like the $args array for [`register_post_type`](http://codex.wordpress.org/Function_Reference/register_post_type).
 ```PHP
 // postType.php
 return array(
@@ -96,6 +96,8 @@ return array(
 
 ## Taxonomies
 
+Taxonomies are defined as associative array. `key` is the taxonomy's slug, `value` an assoc. array: 
+`postType` defines the scope of the taxonomy (the post-type) and `args` is the $args array of [`register_taxonomy`](http://codex.wordpress.org/Function_Reference/register_taxonomy).
 ```PHP
 // taxonomies.php
 return array(
@@ -127,7 +129,7 @@ return array(
 ```
 
 ## Page-Templates
-
+Page templates just like menus defined as associative array. `key` is slug, `value` is pretty name.
 ```PHP
 // templates.php
 return array(
@@ -137,7 +139,7 @@ return array(
 ``` 
 
 ## Application Configuration
-
+Here you can define application-wide settings for SlimVC. The following values are the default values. You can override the settings in your `application.php` config file. A detailed explanation is below. 
 ```PHP
 // application.php
 return array(
