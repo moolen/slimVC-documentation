@@ -18,6 +18,8 @@ require 'app/vendor/autoload.php';
 $App = App\Lib\SlimVC\SlimVC::getInstance();
 ```
 
-After that are you ready to create / modify the files in `app/Config` directory to setup your post types, taxonomies, templates, imagesizes etc.
+## Caching
+Rendering Twig Templates is expensive, by default a cache directory is added in the theme's root folder. Be sure that that folder exists & is writable for your PHP/Apache user.
+The Configuration files are cached (if available) with PHP-APC **ONLY with debug=FALSE** in your [application configuration](https://github.com/moolen/slimVC-documentation/blob/master/configuration.md#application-configuration).
 
-Next step: [Configuration](https://github.com/moolen/SlimVC-documentation/tree/master/configuration.md).
+After that are you ready to configure your Application: [Next Step: Configuration](https://github.com/moolen/SlimVC-documentation/tree/master/configuration.md).
