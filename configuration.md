@@ -1,4 +1,4 @@
-# Configuration
+# SlimVC Configuration Documentation
 
 You configure your Application inside `app/Config` directory, this includes the registration of custom post types, custom taxonomies, menus, sidebars, image size definition post-templates and a application configuration.
 
@@ -178,3 +178,5 @@ Defines the directory that holds the Twig templates.
 
 ## Advanced Customfields
 With version 5 ACF field definitions are saved automatically as json inside the theme directory. With SlimVC those files are saved within `app/Config/acf`.
+
+Next step: [Routing](https://github.com/moolen/SlimVC-documentation/tree/master/routing.md).

@@ -1,4 +1,4 @@
-# Setup
+# SlimVC Setup Documentation
 
 ## Installation
 - clone this repository into your `themes/` folder.
@@ -19,4 +19,5 @@ $App = App\Lib\SlimVC\SlimVC::getInstance();
 ```
 
 After that are you ready to create / modify the files in `app/Config` directory to setup your post types, taxonomies, templates, imagesizes etc.
-Take a look at the [configuration documentation](https://github.com/moolen/SlimVC-documentation/tree/master/configuration.md).
+
+Next step: [Configuration](https://github.com/moolen/SlimVC-documentation/tree/master/configuration.md).

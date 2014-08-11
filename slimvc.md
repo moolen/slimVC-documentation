@@ -1,4 +1,4 @@
-# SlimVC Class
+# SlimVC Class Dicumentation
 
 ## Instantiation
 The SlimVC Class is a Singleton. Get the instance by calling 
@@ -80,3 +80,5 @@ $App->Event->on('wp_load', function(){
 });
 
 ```
+
+Next step: [Controllers](https://github.com/moolen/SlimVC-documentation/tree/master/controllers.md).

@@ -1,4 +1,4 @@
-# Routing
+# SlimVC Routing Documentation
 
 Two different Routing options are available, **explicit** routes and **conditional** routes.
 In each route you map an incoming request to a controller.
@@ -129,9 +129,10 @@ return array(
 		),
 
 		// only cat with id 1 OR 2 OR 3
+		// gets mapped to BooksController -> specialCategoryArchive
 		array(
 			'category' => array(1,2,3),
-			'controller' => 'SpecialCategoriesController::archive'
+			'controller' => 'BooksController::specialCategoryArchive'
 		),
 
 		array(
@@ -220,3 +221,5 @@ class BooksController{
 }
 
 ```
+
+Next step: [SlimVC Class](https://github.com/moolen/SlimVC-documentation/tree/master/slimvc.md).

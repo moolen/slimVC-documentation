@@ -1,6 +1,26 @@
-# Models
+# SlimVC Models Documentation
 
-It is totally up to you how you implement a Model. This is a example of how you could.
+## PostModel 
+
+SlimVC comes with a abstraction of the WP_Post Object (`\App\Lib\SlimVC\PostModel`).
+This provides you a neat interface to the WP_Post Object:
+
+- getTitle($strlen, $raw, $closure, $ellipsis)
+- getPost()
+- getContent($strlen, $raw, $ellipsis)
+- getFeaturedImageUrl()
+- getCustomField($name)
+- getDate($format)
+- getSubPosts( $args )
+- hasSubPosts()
+- isChildOf( $parent )
+- isInCategory($slug)
+
+(More documentation coming soon)
+
+
+## Models
+It is totally up to you how you implement a Model. This is a example of how you could using Iterator Aggregate.
 
 ```PHP
 
@@ -43,21 +63,3 @@ class BooksModel implements \IteratorAggregate{
 }
 
 ```
-
-# PostModel 
-
-SlimVC comes with a abstraction of the WP_Post Object (`\App\Lib\SlimVC\PostModel`).
-This provides you a neat interface to the WP_Post Object:
-
-- getTitle($strlen, $raw, $closure, $ellipsis)
-- getPost()
-- getContent($strlen, $raw, $ellipsis)
-- getFeaturedImageUrl()
-- getCustomField($name)
-- getDate($format)
-- getSubPosts( $args )
-- hasSubPosts()
-- isChildOf( $parent )
-- isInCategory($slug)
-
-(More documentation coming soon)
