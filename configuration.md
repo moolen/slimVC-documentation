@@ -145,15 +145,10 @@ Here you can define application-wide settings for SlimVC. The following values a
 return array(
 	'debug' => true,
 	'namespace.controller' => '\\App\\Conrollers\\',
-	'method.seperator' => ':',
+	'method.seperator' => '::',
 	'log.level' => 8,
 	'log.enabled' => true,
-	'slim' => array(
-		// view & templating
-		'view' => new \Slim\Views\Twig(),
-		'templates.path' => dirname(__FILE__) . '/../Views',
-	)
-	
+	'templates.path' => dirname(__FILE__) . '/../Views'
 );
 ```
 
@@ -177,6 +172,9 @@ Set the log level from 1 to 8. 8 is verbosest.
 
 ##### `log.enabled` (boolean)
 En-/Disable the logger.
+
+##### `templates.path`
+Defines the directory that holds the Twig templates.
 
 ## Advanced Customfields
 With version 5 ACF field definitions are saved automatically as json inside the theme directory. With SlimVC those files are saved within `app/Config/acf`.
