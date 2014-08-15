@@ -1,9 +1,19 @@
 # SlimVC Setup Documentation
 
 ## Installation
-- clone this repository into your `themes/` folder.
-- install composer (https://getcomposer.org/download/) 
-- run `composer install` inside `themes/<your-theme>/app/` directory.
+clone the repository into your `themes/` folder.
+```
+git clone https://github.com/moolen/SlimVC.git
+```
+install composer (https://getcomposer.org/download/)
+```
+curl -sS https://getcomposer.org/installer | php
+```
+
+Install the dependencies inside `themes/<your-theme>/app/` directory.
+```
+composer install
+```
 
 Be sure to create a .htaccess file (e.g. by setting permalinks in the wordpress admin area).
 
@@ -19,7 +29,7 @@ $App = App\Lib\SlimVC\SlimVC::getInstance();
 ```
 
 ## Caching
-Rendering Twig Templates is expensive, by default a cache directory is added in the theme's root folder. Be sure that that folder exists & is writable for your PHP/Apache user.
+Rendering Twig Templates is expensive, by default a cache directory is added in the theme's root folder. Be sure that the folder exists & is writable for your PHP/Apache user.
 The Configuration files are cached (if available) with PHP-APC **ONLY with debug=FALSE** in your [application configuration](https://github.com/moolen/slimVC-documentation/blob/master/configuration.md#application-configuration).
 
 After that are you ready to configure your Application: [Next Step: Configuration](https://github.com/moolen/SlimVC-documentation/tree/master/configuration.md).

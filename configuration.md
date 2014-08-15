@@ -129,7 +129,7 @@ return array(
 ```
 
 ## Page-Templates
-Page templates just like menus defined as associative array. `key` is slug, `value` is pretty name.
+Page templates are like menus defined as associative array. `key` is slug, `value` is pretty name.
 ```PHP
 // templates.php
 return array(
