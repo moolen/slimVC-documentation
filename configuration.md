@@ -148,7 +148,8 @@ return array(
 	'method.seperator' => '::',
 	'log.level' => 8,
 	'log.enabled' => true,
-	'templates.path' => dirname(__FILE__) . '/../Views'
+	'templates.path' => dirname(__FILE__) . '/../Views',
+	'twig.cache.dir' => dirname(__FILE__) . '/../../cache'
 );
 ```
 
@@ -175,6 +176,9 @@ En-/Disable the logger.
 
 ##### `templates.path`
 Defines the directory that holds the Twig templates.
+
+##### `twig.cache.dir`
+Defines twig's cache directory for precompiled twig templates.
 
 ## Advanced Customfields
 With version 5 ACF field definitions are saved automatically as json inside the theme directory. With SlimVC those files are saved within `app/Config/acf`.
